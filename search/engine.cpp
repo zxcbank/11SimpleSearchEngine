@@ -76,21 +76,21 @@ term Search::CalculateRela(const std::string& q) {
             } else {
                 if (iter == 0) {
                     if (IsOperand(expression[iter])) {
-                        std::cerr << "left operand cant be OR | AND";
+                        std::cerr << "left operand cant be OR | AND" << expression[iter] << "\n";
                         exit(1);
                     }
                     A = scorings[expression[iter]];
                     iter++;
                 } else if (iter == 1) {
                     if (!IsOperand(expression[iter])) {
-                        std::cerr << "left operand must be OR | AND";
+                        std::cerr << "left operand must be OR | AND, but not " << expression[iter] << "\n";
                         exit(1);
                     }
                     oper = expression[iter];
                     iter++;
                 } else if (iter == 2) {
                     if (IsOperand(expression[iter])) {
-                        std::cerr << "right operand cant be OR | AND";
+                        std::cerr << "right operand cant be OR | AND, but not " << expression[iter] << "\n";
                         exit(1);
                     }
                     B = scorings[expression[iter]];
@@ -100,15 +100,20 @@ term Search::CalculateRela(const std::string& q) {
             }
             if (i == q.size() - 1) {
                 if (IsOperand(expression[iter])) {
-                    std::cerr << "right operand cant be OR | AND";
+                    std::cerr << "right operand cant be OR | AND" << expression[iter] << "\n";
                     exit(1);
                 }
-                B = scorings[expression[iter]];
-                iter++;
+                if (oper.empty()){
+                    A = scorings[expression[iter]];
+                } else {
+                    B = scorings[expression[iter]];
+                    iter++;
+                }
             }
         }
     }
-    
+    if (oper.empty())
+        return A;
     if (oper == "AND")
         return A * B;
     else
@@ -168,9 +173,11 @@ void Search::rangingFiles() {
     scoringTerms(terms_list);
     
     relative_indexes = CalculateRela(search_query).indexes;
+    
     auto end = std::chrono::steady_clock::now();
     auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
     std::cout << "RELEVANT FILES for " << search_query << " founded in " << elapsed_ms.count()<< "ms \n";
+    
     show(5, terms_list);
     std::cout << "Searched " << N << " Files.\n";
 }
@@ -235,7 +242,3 @@ float Search::scoringFile(const std::string& term, const std::string& fn) {
     float leftpart = (tf * (k + 1)) / (tf + k * (1 - b  + b * (static_cast<float>(dl) / static_cast<float>(avg_len))));
     return right_log * leftpart;
 }
-
-
-
-
