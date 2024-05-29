@@ -1,9 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
-project(11SimpleSearchEngine)
+project(11SearchEngine)
 
-set(CMAKE_CXX_STANDARD 14)
-add_subdirectory(lib)
+set(CMAKE_CXX_STANDARD 20)
 
-add_executable(11SimpleSearchEngine
-        bin/main.cpp
-        lib/engine.hpp)
+
+add_subdirectory(search)
+add_subdirectory(bin)
