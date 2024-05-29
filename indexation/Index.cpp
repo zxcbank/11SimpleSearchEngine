@@ -24,6 +24,7 @@ void Index::ExploreFiles() {
 //    std::string h = CreateDataDirectories(new_dir);
 //    std::system("cd Data");
     makeDataFiles(new_dir, paths_);
+    makePostingListFile();
 }
 
 void Index::recursive_index(std::vector<std::string>& paths_, const std::string& current_path) {
@@ -81,13 +82,20 @@ void Index::makeDataFiles (const std::string& new_path, const std::vector<std::s
     for (const auto& file : paths_) {
         std::map<std::string, int> file_data = readFile(file);
         
-        std::string new_file_name = "index" + std::to_string(++current_did) + ".txt";
+        std::string new_file_name = "index" + std::to_string(current_did) + ".txt";
         std::string new_file_path = new_path  + "\\" + new_file_name;
         writeFile(new_file_path, file_data, std::string(file));
+        current_did++;
     }
-    
 }
 
-
-
-
+void Index::makePostingListFile() {
+    std::ofstream write_file(posting_list_filename);
+    for  (const auto& i  : PostingList)  {
+        write_file << i.first << " ";
+        for   (const auto& j   : i.second)   {
+            write_file << j << " ";
+        }
+        write_file << "\n";
+    }
+}
