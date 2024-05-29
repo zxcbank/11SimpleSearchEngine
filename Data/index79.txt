@@ -1,0 +1,36 @@
+C:\itmo\OP\6HamArc\bin\main.cpp
+69
+0 1
+a 1
+aname 4
+append_file_to_arch 1
+argc 2
+argv 2
+char 1
+create_arch 1
+delete_file_from_arch 1
+fstream 1
+functional 1
+g 4
+h 2
+haf 1
+ham 4
+haming 3
+include 6
+int 2
+iostream 1
+lc_all 1
+main 1
+mama 5
+numeric 1
+papa 3
+parse 1
+parser 1
+push_back 2
+return 1
+ru 1
+setlocale 1
+std 5
+string 4
+txt 2
+vector 1

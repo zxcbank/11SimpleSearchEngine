@@ -1,0 +1,12 @@
+C:\itmo\OP\10TTaskScheduler\lib\TTaskScheduler.cpp
+10
+04 1
+2024 1
+24 1
+by 1
+created 1
+h 1
+include 1
+on 1
+ttaskscheduler 1
+Святослав 1

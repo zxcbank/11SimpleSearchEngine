@@ -1,0 +1,17 @@
+C:\itmo\OP\1PrintFile\CMakeLists.txt
+22
+0 4
+1 1
+3 1
+add_executable 1
+c 1
+cmake_minimum_required 1
+cpp 2
+cxx 1
+functions 2
+h 1
+labwork1 2
+languages 1
+main 1
+project 1
+version 2

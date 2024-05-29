@@ -11,3 +11,5 @@ void correct_term(std::string& term);
 bool IsDirCorrect(const std::string& dir);
 
 bool IsExtensionCorrect(const std::string& dir);
+
+std::vector<std::string> ExploringLine(std::string& line);

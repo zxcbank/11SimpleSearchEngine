@@ -1,0 +1,22 @@
+C:\itmo\OP\7Weather\bin\main.cpp
+23
+0 1
+02 1
+09 1
+2024 1
+by 1
+config 1
+created 1
+fn 2
+h 1
+include 2
+int 1
+iostream 1
+json 1
+logic 2
+main 1
+on 1
+return 1
+std 1
+string 1
+Святослав 1

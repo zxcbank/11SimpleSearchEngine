@@ -1,0 +1,6 @@
+C:\itmo\OP\5Array\lib\CMakeLists.txt
+4
+add_library 1
+array 1
+h 1
+x 1

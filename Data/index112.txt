@@ -1,0 +1,6 @@
+C:\itmo\OP\9Range\lib\CMakeLists.txt
+4
+adapters 1
+add_library 1
+cpp 1
+range 1

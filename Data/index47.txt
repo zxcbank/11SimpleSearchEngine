@@ -1,0 +1,8 @@
+C:\itmo\OP\3SandPileModel\.gitignore
+6
+build 1
+cmake 1
+cpp 1
+debug 1
+idea 1
+image 1

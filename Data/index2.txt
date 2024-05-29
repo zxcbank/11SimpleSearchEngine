@@ -1,0 +1,12 @@
+C:\itmo\OP\10TTaskScheduler\bin\CMakeLists.txt
+12
+10ttaskschedulert 1
+add_executable 1
+cpp 1
+main 1
+private 1
+project_name 3
+project_source_dir 1
+public 1
+target_include_directories 1
+target_link_libraries 1
