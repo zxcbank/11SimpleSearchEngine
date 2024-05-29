@@ -1,11 +1,15 @@
-C:\itmo\OP\2int2023_t\Testing\Temporary\LastTest.log
-18
-07 2
-18 4
-2 2
-dec 2
-end 1
-rtz 2
-start 1
-testing 2
-зима 2
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\CMakeFiles\cmake.check_cache
+14
+by 1
+checking 1
+cmake 1
+cmakecache 1
+dependency 1
+file 2
+for 1
+generated 1
+is 1
+of 1
+the 1
+this 1
+txt 1

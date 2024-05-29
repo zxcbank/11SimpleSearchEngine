@@ -1,6 +1,2 @@
-C:\itmo\OP\10TTaskScheduler\lib\CMakeLists.txt
-4
-10ttaskschedulert 1
-add_library 1
-cpp 1
-ttaskscheduler 1
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\.cmake\api\v1\query\toolchains-v1
+0

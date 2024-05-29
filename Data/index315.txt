@@ -1,0 +1,32 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\CMakeFiles\googletest-populate.dir\Labels.json
+244
+10ttaskscheduler 11
+: 15
+_deps 11
+build 12
+c: 11
+cmake 11
+cmakefiles 3
+complete 1
+configure 1
+debug 11
+download 1
+file 11
+googletest 40
+install 1
+itmo 11
+labels 1
+mkdir 1
+name 1
+op 11
+patch 1
+populate 29
+prefix 8
+rule 10
+sources 1
+src 8
+stamp 8
+subbuild 11
+target 1
+test 1
+update 1

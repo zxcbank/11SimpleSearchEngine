@@ -1,0 +1,11 @@
+C:\itmo\OP\2int2023_t\Testing\Temporary\LastTest.log
+16
+07 2
+18:18 2
+2 2
+dec 2
+end 1
+rtz 2
+start 1
+testing: 2
+зима 2

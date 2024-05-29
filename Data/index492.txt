@@ -1,0 +1,11 @@
+C:\itmo\OP\badshit\cmake-build-debug\Testing\Temporary\LastTest.log
+16
+2 2
+20:55 2
+29 2
+end 1
+may 2
+rtz 2
+start 1
+testing: 2
+зима 2

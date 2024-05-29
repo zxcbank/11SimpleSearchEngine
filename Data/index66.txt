@@ -1,12 +1,17 @@
-C:\itmo\OP\5Array\bin\CMakeLists.txt
-12
-add_executable 1
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-src\.clang-format
+16
+a 1
+basedonstyle: 1
+clang 1
 cpp 1
-main 1
-private 1
-project_name 3
-project_source_dir 1
-public 1
-target_include_directories 1
-target_link_libraries 1
-x 1
+file 2
+file: 1
+format 1
+google 1
+i 1
+language: 1
+manually 1
+reformat 1
+run 1
+style 1
+to 1

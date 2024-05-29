@@ -1,0 +1,6 @@
+C:\itmo\OP\2int2023_t\lib\CMakeLists.txt
+6
+add_library 1
+cpp 1
+h 1
+number 3

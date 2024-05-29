@@ -1,0 +1,2 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-configure
+0

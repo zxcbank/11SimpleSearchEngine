@@ -1,0 +1,19 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\cmake-build-debug\.ninja_log
+19
+6 1
+7374926620200397 1
+7374926621080401 1
+814 2
+87910964e59729ec 1
+906 1
+app 2
+cmakefiles 1
+cpp 1
+d1de0c322c42275b 1
+dir 1
+exe 1
+log 1
+main 1
+ninja 1
+obj 1
+v5 1

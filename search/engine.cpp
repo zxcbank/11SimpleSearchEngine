@@ -172,6 +172,7 @@ void Search::rangingFiles() {
     auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
     std::cout << "RELEVANT FILES for " << search_query << " founded in " << elapsed_ms.count()<< "ms \n";
     show(5, terms_list);
+    std::cout << "Searched " << N << " Files.\n";
 }
 
 void Search::remakePostingList(std::string& path_) {

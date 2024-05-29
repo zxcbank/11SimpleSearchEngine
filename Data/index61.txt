@@ -1,5 +1,36 @@
-C:\itmo\OP\4ArgParser\lib\CMakeLists.txt
-4
-add_library 1
-argparser 2
-cpp 1
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-build\googletest\generated\gmock_main.pc
+45
+0 1
+1 4
+10ttaskscheduler 2
+12 2
+c: 2
+cflags: 1
+com 1
+description: 1
+dgtest_has_pthread 1
+files 2
+function 1
+github 1
+gmock 1
+gmock_main 1
+google 1
+googlemock 1
+googletest 1
+https: 1
+i 1
+include 1
+includedir 2
+l 1
+lgmock_main 1
+lib 1
+libdir 2
+libs: 1
+main 1
+name: 1
+program 2
+requires: 1
+url: 1
+version: 1
+with 1
+x86 2

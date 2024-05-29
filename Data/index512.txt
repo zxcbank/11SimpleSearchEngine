@@ -1,0 +1,149 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\cmake-build-debug\CMakeFiles\3.28.1\CMakeDetermineCompilerABI_C.bin
+220
+ 9
+ 1
+ 2
+ 6
+ 1
+ 2
+h‰eèÇeü 1
+º 1
+ 8
+ 2
+ 1
+ 1
+ 1
+!!! 220
+0 2
+0ádf 1
+1 1
+2 2
+4 2
+8 1
+_ 3
+a‰Ñl 1
+a¸ 1
+b 2
+be 1
+bss 1
+cannot 1
+crt 1
+data 1
+dos 1
+d† 1
+d‰m 1
+eèu 1
+f 1
+h 1
+hƒÄ 1
+h…Àth‹1 1
+h‰hıÿÿh‰Áè 1
+h‰d 1
+h‰e¸hÇe° 1
+h‰eĞh‹eèh‰eÈhÇeÀ 1
+h‰eØh‹eØh‹ 1
+h‰eğhƒ 1
+h‰Áh‹³n 1
+h‰Áèe 1
+h‰Áèx 1
+h‰Áè 1
+h‰Áèû 1
+h‰Âh‹52 1
+h‰Âh‹ˆ2 1
+h‰Âh 1
+h‹ 2
+h‹ 3
+h‹3 1
+h‹3 1
+h‹2 1
+h‹52 1
+h‹o2 2
+h‹¢2 1
+h‹å2 1
+h‹æo 1
+h‹ï3 1
+h‹g4 1
+h‹—4 1
+h‹eğh 1
+h‹mÈh‹eÀh‹uĞğh± 1
+h‹u°h‹e¸h‡h‹ 1
+h1_ 1
+idata 1
+in 1
+j 1
+l 2
+mode 1
+mz 1
+p 3
+pdata 1
+pe 1
+program 1
+rdata 1
+reloc 1
+rsrc 1
+run 1
+text 1
+this 1
+tls 1
+uh‹ó1 1
+uh‰åh‰mh‰ul‰e 1
+u¨h‹–2 1
+x 1
+xdata 1
+€ 4
+ 1
+ƒ 1
+ƒøu 2
+ƒøuh‹‰4 1
+…Àt 1
+…Àu 1
+‰ 1
+‰w_ 1
+‰ö_ 1
+‰eü‹eühƒÄ0 2
+‹ 6
+‹hg_ 1
+‹‰è 1
+‹‰è¾ 1
+‹eäeh‹ 1
+ 2
+hƒÄ0 1
+  2
+¨ 1
+° 2
+´ 1
+¸ 2
+¸lÍ 1
+¹ 1
+¹ 1
+¹ 1
+¹ 1
+º 1
+¾f 1
+À 8
+Ãuh‰åhƒì 1
+Ãuh‰åhƒì0h‹w4 1
+Ãuh‰åhƒì0Çeüÿ 2
+Ãuh‰åhƒìphÇeğ 1
+Ç 4
+Çè 1
+Çeä0 1
+Çeü 1
+Í 1
+Ğ 1
+è 2
+è 2
+è 1
+èg 1
+èt 1
+è 1
+è 1
+ë 4
+ëe¹è 1
+ğ 2
+ğ 1
+ü 1
+ÿĞh‹½2 1
+ÿĞh‹‚1 1
+ÿĞè´ 1
+ÿÿ 1

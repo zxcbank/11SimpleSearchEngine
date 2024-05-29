@@ -1,0 +1,17 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-src\googletest\cmake\Config.cmake.in
+17
+check_required_components 1
+cmake 1
+cmake_current_list_dir 1
+cmakefinddependencymacro 1
+endif 1
+find_dependency 1
+gtest_has_pthread 1
+if 1
+include 2
+package_init 1
+project_name 1
+set 1
+targets_export_name 1
+threads 1
+threads_prefer_pthread_flag 2

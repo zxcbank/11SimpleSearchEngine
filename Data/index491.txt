@@ -1,0 +1,5 @@
+C:\itmo\OP\badshit\cmake-build-debug\mama.txt
+3
+derevo 1
+mama 1
+popa 1

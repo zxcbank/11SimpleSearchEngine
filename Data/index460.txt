@@ -1,0 +1,2 @@
+C:\itmo\OP\badshit\cmake-build-debug\.cmake\api\v1\query\toolchains-v1
+0

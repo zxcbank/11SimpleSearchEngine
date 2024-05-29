@@ -1,0 +1,25 @@
+C:\itmo\OP\7Weather\bin\Serialize.h
+39
+02 1
+19 1
+2024 1
+by 1
+created 1
+date 1
+define 1
+endif 1
+ifndef 1
+inc_7weather_bin_serialize_h_ 3
+include 1
+int 5
+iostream 1
+on 1
+serialize_date 1
+serialize_fallout 1
+serialize_temperature 1
+serialize_visibility 1
+serialize_winddirection 1
+seriallize_windmovespeed 1
+std::string 7
+x 5
+Святослав 1

@@ -8,7 +8,7 @@
 #define PROJECT_DIR  "C:\\itmo\\OP\\11SimpleSearchEngine"
 
 
-int main( int argc, char** argv) {
+int main (int argc, char** argv) {
 //     Index Indexator(PROJECTS_DIR);
 //     Indexator.ExploreFiles();
     Search search(argc, argv, PROJECT_DIR);

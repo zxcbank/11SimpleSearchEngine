@@ -1,0 +1,15 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\CMakeFiles\cmake.check_cache
+14
+by 1
+checking 1
+cmake 1
+cmakecache 1
+dependency 1
+file 2
+for 1
+generated 1
+is 1
+of 1
+the 1
+this 1
+txt 1

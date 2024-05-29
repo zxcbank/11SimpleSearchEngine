@@ -1,0 +1,33 @@
+C:\itmo\OP\3SandPileModel\Parser.h
+43
+10 1
+2023 1
+29 1
+argc 1
+argv 1
+by 1
+char 1
+class 1
+const 2
+created 1
+data_set 1
+filename 2
+freq 1
+get_data 1
+get_field_size 1
+h 1
+in_filename 1
+include 1
+int 2
+max_iter 1
+on 1
+once 1
+out_filename 1
+parser 2
+pile 5
+pragma 1
+public: 1
+set_field 1
+std::string 3
+void 3
+Святослав 1

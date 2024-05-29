@@ -1,5 +1,5 @@
 C:\itmo\OP\10TTaskScheduler\bin\main.cpp
-213
+209
 0 2
 04 1
 1 1
@@ -17,7 +17,6 @@ b1 4
 b2 4
 by 1
 c 4
-cout 2
 created 1
 d 4
 det 2
@@ -43,8 +42,8 @@ main 1
 on 1
 return 11
 scheduler 23
-sqrt 2
-std 4
+std::cout 2
+std::sqrt 2
 ttaskscheduler 3
 v 6
 valarray 1

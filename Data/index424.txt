@@ -1,0 +1,6 @@
+C:\itmo\OP\6HamArc\lib\CMakeLists.txt
+4
+add_library 1
+argparser 1
+cpp 1
+hamarc 1

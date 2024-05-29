@@ -1,0 +1,11 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\cmake-build-debug\Testing\Temporary\LastTest.log
+16
+15 2
+19:11 2
+2 2
+end 1
+may 2
+rtz 2
+start 1
+testing: 2
+зима 2

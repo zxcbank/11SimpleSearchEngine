@@ -1,0 +1,20 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\CMakeFiles\3.28.1\CMakeSystem.cmake
+40
+0 4
+1 1
+10 4
+19045 4
+amd64 2
+cmake_crosscompiling 1
+cmake_host_system 1
+cmake_host_system_name 1
+cmake_host_system_processor 1
+cmake_host_system_version 1
+cmake_system 1
+cmake_system_loaded 1
+cmake_system_name 1
+cmake_system_processor 1
+cmake_system_version 1
+false 1
+set 10
+windows 4

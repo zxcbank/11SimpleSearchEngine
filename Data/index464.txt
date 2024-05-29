@@ -1,0 +1,11 @@
+C:\itmo\OP\badshit\cmake-build-debug\.cmake\api\v1\reply\directory-.-Debug-d0094a50bb2071803777.json
+16
+: 8
+backtracegraph 1
+build 1
+commands 1
+files 1
+installers 1
+nodes 1
+paths 1
+source 1

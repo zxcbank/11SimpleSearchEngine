@@ -11,8 +11,8 @@ std::vector<char> ignoring_symbols = {' ', '\t', '\r', '\n', '\0', '-', '.', ';'
 
 
 
-std::vector<std::string> ignoring_directories = {".git", ".svn", ".hg", ".bzr", "cmake-build-debug", ".idea", "11SimpleSearchEngine"};
-std::vector<std::string> ignoring_extensions = {".cmake", ".png", ".bmp"};
+std::vector<std::string> ignoring_directories = {".git", ".svn", ".hg", ".bzr", ".idea", "11SimpleSearchEngine"};
+std::vector<std::string> ignoring_extensions = {".png", ".bmp"};
 
 void correct_term(std::string& term) {
     for (int i = 0; i < term.size(); i++)

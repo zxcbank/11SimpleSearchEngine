@@ -1,0 +1,18 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\main.cpp
+19
+char 1
+h 2
+include 2
+int 2
+main 1
+task_1 1
+task_2 1
+Использовать 1
+Комитить 1
+для 1
+запрещено 1
+изменения 1
+исключительно 1
+отладки 1
+файла 1
+этого 1

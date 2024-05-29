@@ -1,23 +1,29 @@
-C:\itmo\OP\6HamArc\bin\parser.h
-41
-arch_name 1
-arch_name_and_files_find 1
-argc 1
-args 2
-argv 1
-bool 2
-char 1
-files 1
-h 1
-ham 1
-i 1
-include 4
-int 2
-iostream 1
-once 1
-parse 2
-pragma 1
-std 7
-string 5
-vector 4
-void 1
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-src\docs\community_created_documentation.md
+39
+a 1
+blob 1
+by 2
+com 2
+community 2
+created 2
+documentation 2
+electricrcaircraftguy 3
+ercaguy_dotfiles 1
+following 1
+github 2
+googlemock 1
+googletest 2
+https: 2
+in 1
+insights 2
+is 1
+links 1
+list 1
+master 1
+md 1
+no 1
+of 1
+order 1
+particular 1
+the 2
+to 1

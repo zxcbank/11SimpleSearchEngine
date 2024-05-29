@@ -1,0 +1,17 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\CMakeFiles\TargetDirectories.txt
+40
+10ttaskscheduler 3
+_deps 3
+build 3
+c: 3
+cmake 3
+cmakefiles 3
+debug 3
+dir 3
+edit_cache 1
+googletest 4
+itmo 3
+op 3
+populate 1
+rebuild_cache 1
+subbuild 3

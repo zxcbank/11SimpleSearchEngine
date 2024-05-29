@@ -1,0 +1,35 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-patch-info.txt
+38
+a 1
+an 1
+and 1
+anything 1
+are 1
+be 1
+changes 1
+command 1
+contents 1
+detail 1
+executed 1
+file 3
+generated 1
+if 1
+implementation 1
+in 1
+internal 1
+is 2
+its 1
+meaning 1
+no 1
+of 1
+or 1
+other 1
+re 1
+step 1
+supported 1
+the 1
+this 3
+update 1
+use 1
+will 1
+work_dir 1

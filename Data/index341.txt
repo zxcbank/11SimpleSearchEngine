@@ -1,0 +1,27 @@
+C:\itmo\OP\10TTaskScheduler\lib\CommonTask.h
+30
+0 1
+04 1
+2024 1
+29 1
+bool 2
+by 1
+calculatable 1
+class 1
+created 1
+default 1
+execute 1
+false 2
+h 1
+include 1
+is_calculated 1
+k2 1
+object 2
+on 1
+once 1
+pragma 1
+public: 1
+virtual 2
+virtualtask 2
+void 1
+Святослав 1

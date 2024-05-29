@@ -1,0 +1,15 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\cmake-build-debug\CMakeFiles\TargetDirectories.txt
+36
+app 1
+build 3
+c: 3
+cmake 3
+cmakefiles 3
+debug 3
+dir 3
+edit_cache 1
+itmo 3
+livecoding 6
+op 3
+rebuild_cache 1
+zxcbank 3

@@ -1,0 +1,19 @@
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-src\googletest\docs\README.md
+21
+are 1
+content 1
+directory 1
+docs 2
+documentation 1
+googletest 1
+has 1
+level 1
+moved 2
+on 1
+the 2
+to 2
+top 1
+updates 1
+we 1
+which 1
+working 1

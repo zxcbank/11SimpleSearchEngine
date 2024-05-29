@@ -1,0 +1,22 @@
+C:\itmo\OP\livecoding\livecoding-zxcbank\cmake-build-debug\CMakeFiles\3.28.1\CMakeRCCompiler.cmake
+29
+1 2
+2024 1
+bin 2
+c: 1
+clion 1
+cmake_rc_compiler 1
+cmake_rc_compiler_arg1 1
+cmake_rc_compiler_env_var 1
+cmake_rc_compiler_loaded 1
+cmake_rc_output_extension 1
+cmake_rc_source_file_extensions 1
+exe 1
+files 1
+jetbrains 1
+mingw 1
+obj 1
+program 1
+rc 3
+set 6
+windres 1

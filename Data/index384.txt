@@ -1,0 +1,18 @@
+C:\itmo\OP\2int2023_t\tests\number_tests[1]_include.cmake
+26
+1 2
+2int2023_t 2
+_tests 2
+add_test 1
+c: 2
+cmake 2
+else 1
+endif 1
+exists 1
+if 1
+include 1
+itmo 2
+number_tests 2
+number_tests_not_built 2
+op 2
+tests 2

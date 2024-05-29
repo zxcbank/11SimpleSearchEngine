@@ -1,0 +1,13 @@
+C:\itmo\OP\badshit\cmake-build-debug\CMakeFiles\TargetDirectories.txt
+30
+badshit 4
+build 3
+c: 3
+cmake 3
+cmakefiles 3
+debug 3
+dir 3
+edit_cache 1
+itmo 3
+op 3
+rebuild_cache 1

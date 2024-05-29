@@ -1,6 +1,31 @@
-C:\itmo\OP\5Array\lib\CMakeLists.txt
-4
-add_library 1
-array 1
-h 1
-x 1
+C:\itmo\OP\10TTaskScheduler\cmake-build-debug\_deps\googletest-src\.github\workflows\gtest-ci.yml
+69
+0 3
+actions 3
+bazel 3
+checkout 3
+ci 1
+depth: 3
+errors 3
+fetch 3
+jobs: 1
+latest 3
+linux: 1
+macos 1
+macos: 1
+name: 4
+on: 4
+pull_request: 1
+push: 1
+run: 3
+runs 3
+steps: 3
+test 3
+test_output 3
+tests 3
+ubuntu 1
+uses: 3
+v2 3
+windows 1
+windows: 1
+with: 3
