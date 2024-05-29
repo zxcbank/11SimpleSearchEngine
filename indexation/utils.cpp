@@ -4,10 +4,12 @@
 #include <algorithm>
 #include "utils.hpp"
 
-std::vector<char> ignoring_symbols = {' ', '\t', '\r', '\n', '\0', '-', '.', ';', ':', ',', '\'',
+std::vector<char> ignoring_symbols = {' ', '\t', '\r', '\n', '\0', '-', '.', ';', ',', '\'',
                                       '"', '\'', '+', '*', '/', '(', ')', '[', ']', '{', '}',
                                       '&', '|', '<', '>', '=', '?',
                                       '#', '%', '$', '@', '`', '^', '~', '!'};
+
+
 
 std::vector<std::string> ignoring_directories = {".git", ".svn", ".hg", ".bzr", "cmake-build-debug", ".idea", "11SimpleSearchEngine"};
 std::vector<std::string> ignoring_extensions = {".cmake"};
@@ -31,7 +33,8 @@ std::vector<std::string> ExploringLine(std::string& line) {
     for (const auto& c : line) {
         if (std::find(ignoring_symbols.begin(), ignoring_symbols.end(), c) != ignoring_symbols.end()) {
             if (!t.empty()) {
-                correct_term(t);
+                if (t != "OR" && t != "AND")
+                    correct_term(t);
                 terms.push_back(t);
             }
             
@@ -45,4 +48,7 @@ std::vector<std::string> ExploringLine(std::string& line) {
         terms.push_back(t);
     }
     return terms;
+}
+bool IsOperand(const std::string& line) {
+    return  (line == "OR" || line == "AND");
 }

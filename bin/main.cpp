@@ -9,10 +9,10 @@
 
 
 int main( int argc, char** argv) {
-     Index Indexator(PROJECTS_DIR);
-     Indexator.ExploreFiles();
-//    Search search(argc, argv, PROJECT_DIR);
-//    search.rangingFiles();
+//     Index Indexator(PROJECTS_DIR);
+//     Indexator.ExploreFiles();
+    Search search(argc, argv, PROJECT_DIR);
+    search.rangingFiles();
     
     return 0;
 }

@@ -13,3 +13,7 @@ bool IsDirCorrect(const std::string& dir);
 bool IsExtensionCorrect(const std::string& dir);
 
 std::vector<std::string> ExploringLine(std::string& line);
+
+std::vector<std::string> PasingQ(std::string& line);
+
+bool IsOperand(const std::string& line);

@@ -3,9 +3,13 @@
 //
 #include <fstream>
 #include <map>
+#include <valarray>
 #include "engine.hpp"
-#define AND AND
-#define OR OR
+
+std::vector<char> ignoring_parse_symbols = {' ', '\t', '\r', '\n', '\0', '-', '.', ';', ',', '\'',
+                                            '"', '\'', '+', '*', '/', '[', ']', '{', '}',
+                                            '&', '|', '<', '>', '=', '?',
+                                            '#', '%', '$', '@', '`', '^', '~', '!'};
 
 bool IsIndexed(const std::string& path) {
     std::string data_path = path + "\\Data\\posting_list.txt";
@@ -25,13 +29,7 @@ Search::Search(int argc, char** argv,std::string&& PROJ_DIR) {
     } else {
         std::string data_path = project_path + "\\Data\\posting_list.txt";
         std::ifstream posting_list(data_path);
-        std::string line;
-        posting_list >> line;
-        N = std::stoi(line);
-        posting_list >> line;
-        all_len = std::stoi(line);
-        posting_list >> line;
-        avg_len = std::stoi(line);
+        
     }
     
     for (int i = 1; i < argc; i++) {
@@ -40,45 +38,178 @@ Search::Search(int argc, char** argv,std::string&& PROJ_DIR) {
     
     search_query = query;
 }
-void CalculateTerms(std::vector<std::string>& terms_list, std::map<std::string, term>& scorings, const std::string& data_path, int N) {
-    std::string data_path_ = data_path + "\\Data\\posting_list.txt";
-    
-    std::string line;
-    for (auto& word : terms_list) {
-        std::ifstream posting_list(data_path_);
-        while (!posting_list.eof()) {
-            posting_list >> line;
-            if (line.find(word) != line.npos) {
-                std::vector<std::string> words_in_line = ExploringLine(line);
-                term t(word, N);
-                for (auto i = words_in_line.begin()++; i != words_in_line.end(); i++) {
-                    t.incuded_in_files.push_back(std::stoi(*i));
+
+term Search::CalculateRela(const std::string& q) {
+    std::vector<std::string> expression(3);
+    std::string oper;
+    term A, B;
+    int iter = 0;
+    for (int i = 0; i < q.size(); i++) {
+        if (q[i] == '(') {
+            std::string subline;
+            int start = ++i;
+            int t = -1;
+            while (t != 0) {
+                if (q[i] == '(') {
+                    t--;
+                } else if (q[i] == ')') {
+                    t++;
+                }
+                if (t != 0) {
+                    subline += q[i];
+                }
+                i++;
+            }
+            if (iter == 0) {
+                A = CalculateRela(subline);
+                iter++;
+            } else if (iter == 1) {
+                std::cerr << "must be operator \n";
+                exit(1);
+            } else if (iter == 2) {
+                B = CalculateRela(subline);
+            }
+        } else {
+            if (std::find(ignoring_parse_symbols.begin(), ignoring_parse_symbols.end(), q[i]) == ignoring_parse_symbols.end()) {
+                expression[iter] += q[i];
+            } else {
+                if (iter == 0) {
+                    if (IsOperand(expression[iter])) {
+                        std::cerr << "left operand cant be OR | AND";
+                        exit(1);
+                    }
+                    A = scorings[expression[iter]];
+                    iter++;
+                } else if (iter == 1) {
+                    if (!IsOperand(expression[iter])) {
+                        std::cerr << "left operand must be OR | AND";
+                        exit(1);
+                    }
+                    oper = expression[iter];
+                    iter++;
+                } else if (iter == 2) {
+                    if (IsOperand(expression[iter])) {
+                        std::cerr << "right operand cant be OR | AND";
+                        exit(1);
+                    }
+                    B = scorings[expression[iter]];
+                    iter++;
                 }
                 
-                for (auto i : t.incuded_in_files) {
-                    std::string i_datafile_path = data_path + "\\Data\\index" + std::to_string(i) + ".txt";
-                    std::ifstream i_datafile(i_datafile_path);
-                    std::string dl_line;
-                    i_datafile >> dl_line;
-                    size_t dl = std::stoi(dl_line);
-                    std::string line2;
-                    while (!i_datafile.eof()) {
-                        i_datafile >> line2;
-                        if (line2.find(word) != line2.npos) {
-                            std::vector<std::string>
-                        }
-                    }
+            }
+            if (i == q.size() - 1) {
+                if (IsOperand(expression[iter])) {
+                    std::cerr << "right operand cant be OR | AND";
+                    exit(1);
                 }
-                break;
+                B = scorings[expression[iter]];
+                iter++;
             }
         }
     }
+    
+    if (oper == "AND")
+        return A * B;
+    else
+        return A + B;
 }
+
+bool cmp(std::pair<int, float> a, std::pair<int, float> b) {
+    return a.second > b.second;
+}
+
+void Search::show(int topk) {
+    std::vector<std::pair<int, float>> top;
+    for (int i = 0; i < relative_indexes.size(); i++) {
+        top.push_back({i, relative_indexes[i]});
+    }
+    std::sort(top.begin(), top.end(), cmp);
+    std::cout << "RELEVANT FILES \n";
+    for (int i = 0; i < topk; i++) {
+        std::string fn = project_path + "\\Data\\index" + std::to_string(top[i].first) + ".txt";
+        std::ifstream file(fn);
+        std::string line;
+        file >> line;
+        std::cout << i + 1 << ") " << line << " " << top[i].second << "\n";
+        
+    }
+}
+
 void Search::rangingFiles() {
     
     std::vector<std::string> terms_list = ExploringLine(search_query);
-    std::map<std::string, term> scorings;
-    std::string data_path = project_path + "\\Data\\posting_list.txt";
-    CalculateTerms(terms_list, scorings, data_path, N, avg_len, all_len);
     
+    std::string post_list = project_path + "\\Data\\posting_list.txt";
+    remakePostingList(post_list);
+    
+    scoringTerms(terms_list);
+    
+    relative_indexes = CalculateRela(search_query).indexes;
+    
+    show(5);
 }
+
+void Search::remakePostingList(std::string& path_) {
+    std::ifstream post_list_file(path_);
+    std::string line;
+    std::getline(post_list_file, line, '\n');
+    N = std::stoi(line);
+    std::getline(post_list_file, line, '\n');
+    all_len = std::stoi(line);
+    std::getline(post_list_file, line, '\n');
+    avg_len = std::stoi(line);
+    
+    while (!post_list_file.eof()) {
+        std::getline(post_list_file, line, '\n');
+        if (line.empty())
+            continue;
+        std::vector<std::string> includings = ExploringLine(line);
+        std::string term = includings[0];
+        for (int i = 1; i < includings.size(); i++)
+            posting_list[term].push_back(std::stoi(includings[i]));
+    }
+}
+
+void Search::scoringTerms(std::vector<std::string>& terms_list) {
+    for (auto& term_ : terms_list) {
+        if (!(term_ == "OR" || term_ == "AND")) {
+            std::vector<int> includings = posting_list[term_];
+            std::vector<float> scorings_for_files(N, 0);
+            for (auto file_index : includings) {
+                std::string fn = project_path + "\\Data\\index" + std::to_string(file_index) + ".txt";
+                scorings_for_files[file_index] = scoringFile(term_, fn);
+            }
+            term t_i(term_, scorings_for_files);
+            scorings[term_] = t_i;
+        }
+    }
+}
+
+float Search::scoringFile(const std::string& term, const std::string& fn) {
+    std::ifstream file(fn);
+    std::string line;
+    float tf = 1;
+    size_t df = posting_list[term].size();
+    std::string real_fn;
+    std::getline(file, real_fn, '\n');
+    int dl;
+    std::getline(file, line, '\n');
+    dl = std::stoi(line);
+    while (!file.eof()) {
+        std::getline(file, line, '\n');
+        if (line.empty())
+            continue;
+        if (line.find(term) != line.npos) {
+            tf = std::stoi(ExploringLine(line)[1]);
+            break;
+        }
+    }
+    
+    float right_log = std::log(static_cast<float>(N) / static_cast<float>(df));
+    float leftpart = (tf * (k + 1)) / (tf + k * (1 - b  + b * (static_cast<float>(dl) / static_cast<float>(avg_len))));
+    return right_log * leftpart;
+}
+
+
+
+
