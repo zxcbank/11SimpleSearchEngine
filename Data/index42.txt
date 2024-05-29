@@ -1,11 +1,26 @@
-C:\itmo\OP\2int2023_t\Testing\Temporary\LastTest.log
-18
-07 2
-18 4
-2 2
-dec 2
-end 1
-rtz 2
-start 1
-testing 2
-çèìà 2
+C:\itmo\OP\2int2023_t\tests\CMakeFiles\number_tests.dir\number_test.cpp.obj
+25
+ 1
+ 1
+0 1
+p 1
+!!! 25
+4 1
+41 1
+79 1
+bss 1
+data 1
+d†’ 1
+p 1
+pÀ 2
+text 1
+€ 1
+” 1
+À 1
+Äa 1
+Ôa 1
+Üa 1
+à 1
+ä6 1
+ø¢ 1
+øì 1

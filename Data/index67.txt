@@ -1,12 +1,26 @@
-C:\itmo\OP\5Array\bin\CMakeLists.txt
-12
-add_executable 1
-cpp 1
+C:\itmo\OP\5Array\bin\main.cpp
+51
+0 1
+1 2
+2 3
+3 2
+4 2
+5 3
+6 2
+array 1
+auto 2
+cout 2
+filter 1
+for 2
+h 1
+i 6
+include 2
+int 4
+iostream 1
+lib 1
+m 4
 main 1
-private 1
-project_name 3
-project_source_dir 1
-public 1
-target_include_directories 1
-target_link_libraries 1
-x 1
+return 1
+std 4
+take 1
+vector 2

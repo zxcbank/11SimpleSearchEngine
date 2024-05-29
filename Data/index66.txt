@@ -1,36 +1,12 @@
-C:\itmo\OP\5Array\.gitignore
-38
-a 1
-app 1
-build 1
-cmake 1
-compiled 3
-d 1
-debug 1
-dll 1
-dylib 1
-dynamic 1
-exe 1
-executables 1
-files 2
-fortran 1
-gch 1
-headers 1
-la 1
-lai 1
-lib 1
-libraries 2
-lo 1
-mod 1
-module 1
-o 1
-obj 1
-object 1
-out 1
-pch 1
-precompiled 1
-prerequisites 1
-slo 1
-smod 1
-so 1
-static 1
+C:\itmo\OP\5Array\bin\CMakeLists.txt
+12
+add_executable 1
+cpp 1
+main 1
+private 1
+project_name 3
+project_source_dir 1
+public 1
+target_include_directories 1
+target_link_libraries 1
+x 1

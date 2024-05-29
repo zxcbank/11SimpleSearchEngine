@@ -1,4 +1,4 @@
-C:\itmo\OP\9Range\.gitignore
+C:\itmo\OP\10TTaskScheduler\.gitignore
 35
 a 1
 app 1

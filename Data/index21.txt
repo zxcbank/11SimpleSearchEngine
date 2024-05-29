@@ -1,16 +1,3 @@
-C:\itmo\OP\1PrintFile\main.cpp
-19
-0 1
-argc 2
-argv 2
-char 1
-current 3
-functions 1
-h 1
-include 1
-int 2
-main 1
-params 1
-parsing 1
-printfile 1
-return 1
+C:\itmo\OP\1PrintFile\mama.txt
+1
+111 1

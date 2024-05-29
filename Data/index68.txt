@@ -1,26 +1,25 @@
-C:\itmo\OP\5Array\bin\main.cpp
-51
+C:\itmo\OP\5Array\CMakeLists.txt
+26
 0 1
-1 2
-2 3
-3 2
-4 2
-5 3
-6 2
-array 1
-auto 2
-cout 2
-filter 1
-for 2
-h 1
-i 6
-include 2
-int 4
-iostream 1
+1 1
+12 1
+20 1
+2023 1
+3 1
+add_subdirectory 3
+bin 1
+c 1
+cmake_cxx_standard 1
+cmake_minimum_required 1
+cxx 1
+description 1
+enable_testing 1
+labword5 1
+labwork5 1
+languages 1
 lib 1
-m 4
-main 1
-return 1
-std 4
-take 1
-vector 2
+project 1
+set 1
+tests 1
+version 2
+year 1

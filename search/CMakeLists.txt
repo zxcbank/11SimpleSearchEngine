@@ -1,3 +1,4 @@
-add_library(11SearchEngineT
+add_library(11SearchEngineK
         engine.cpp
+        engine.hpp
 )

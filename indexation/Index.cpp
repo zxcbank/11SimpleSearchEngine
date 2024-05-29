@@ -18,11 +18,6 @@ void Index::ExploreFiles() {
     recursive_index(paths_, current_path);
     
     
-    for (auto& i : paths_)
-        std::cout << i << '\n';
-    
-//    std::string h = CreateDataDirectories(new_dir);
-//    std::system("cd Data");
     makeDataFiles(new_dir, paths_);
     makePostingListFile();
 }
@@ -45,6 +40,7 @@ void Index::recursive_index(std::vector<std::string>& paths_, const std::string&
 
 std::string Index::CreateDataDirectories(std::string fn) {
     std::filesystem::create_directory(fn);
+    return fn;
 }
 
 std::map<std::string, int> Index::readFile(const std::string& pa) {
@@ -68,9 +64,10 @@ std::map<std::string, int> Index::readFile(const std::string& pa) {
 
 void Index::writeFile(const std::string& fn, std::map<std::string, int>& data, std::string&& real_file_name) {
     std::ofstream write_file(fn);
-    write_file << real_file_name<< "\n";
+    write_file << real_file_name << "\n";
     write_file << std::to_string(data[SPECIAL_LEN_IDENTIFIER]) << "\n";
-    for (auto i = ++data.begin();i != data.end(); i++)  {
+    length_of_files += data[SPECIAL_LEN_IDENTIFIER];
+    for (auto i = ++data.begin(); i != data.end(); i++)  {
         write_file << i->first;
         write_file << " " << i->second << "\n";
     }
@@ -79,22 +76,26 @@ void Index::writeFile(const std::string& fn, std::map<std::string, int>& data, s
 
 void Index::makeDataFiles (const std::string& new_path, const std::vector<std::string>& paths_) {
     
-    for (const auto& file : paths_) {
-        std::map<std::string, int> file_data = readFile(file);
+    for (const auto& file_path : paths_) {
+        std::map<std::string, int> file_data = readFile(file_path);
         
         std::string new_file_name = "index" + std::to_string(current_did) + ".txt";
         std::string new_file_path = new_path  + "\\" + new_file_name;
-        writeFile(new_file_path, file_data, std::string(file));
+        writeFile(new_file_path, file_data, std::string(file_path));
         current_did++;
     }
+    avg_length = length_of_files / current_did;
 }
 
 void Index::makePostingListFile() {
     std::ofstream write_file(posting_list_filename);
-    for  (const auto& i  : PostingList)  {
-        write_file << i.first << " ";
-        for   (const auto& j   : i.second)   {
-            write_file << j << " ";
+    write_file  << current_did  << "\n";
+    write_file << length_of_files << "\n";
+    write_file << avg_length << "\n";
+    for  (const auto& term  : PostingList)  {
+        write_file << term.first << " ";
+        for   (const auto& DIDS  : term.second)   {
+            write_file << DIDS << " ";
         }
         write_file << "\n";
     }

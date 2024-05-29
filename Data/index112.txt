@@ -1,6 +1,12 @@
-C:\itmo\OP\9Range\lib\CMakeLists.txt
-4
-adapters 1
-add_library 1
-cpp 1
+C:\itmo\OP\9Range\lib\Range.cpp
+10
+04 1
+2024 1
+22 1
+by 1
+created 1
+h 1
+include 1
+on 1
 range 1
+Святослав 1

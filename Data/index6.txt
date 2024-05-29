@@ -1,34 +1,6 @@
-C:\itmo\OP\10TTaskScheduler\lib\Castable.h
-64
-04 1
-2024 1
-29 1
-by 1
-castable 7
-class 2
-commontask 1
-const 6
-created 1
-default 3
-get 1
-h 2
-include 3
-index 5
-int 2
-k2 1
-list 3
-object 1
-on 1
-once 1
-operator 2
-other 1
-pragma 1
-public 1
-return 1
-std 2
-t 3
-tasks 2
-template 1
-vector 3
-virtualtask 2
-Святослав 1
+C:\itmo\OP\10TTaskScheduler\lib\CMakeLists.txt
+4
+10ttaskschedulert 1
+add_library 1
+cpp 1
+ttaskscheduler 1
