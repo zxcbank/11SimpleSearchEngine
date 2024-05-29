@@ -5,6 +5,7 @@
 #include <map>
 #include <valarray>
 #include "engine.hpp"
+#include <chrono>
 
 std::vector<char> ignoring_parse_symbols = {' ', '\t', '\r', '\n', '\0', '-', '.', ';', ',', '\'',
                                             '"', '\'', '+', '*', '/', '[', ']', '{', '}',
@@ -117,26 +118,48 @@ term Search::CalculateRela(const std::string& q) {
 bool cmp(std::pair<int, float> a, std::pair<int, float> b) {
     return a.second > b.second;
 }
-
-void Search::show(int topk) {
+void Search::showListOfEntry(std::vector<std::string>& term_list, const std::string& fn) {
+    std::ifstream file (fn);
+    int foundedEntries = 0;
+    int line_index = 0;
+    std::string line;
+    
+    while (!file.eof() && (foundedEntries < HowManyEntries)) {
+        std::getline(file, line, '\n');
+        correct_term(line);
+        for (auto& word : term_list) {
+            if (line.find(word) != line.npos) {
+                std::cout << "    $$ " << word << " in line " << line_index << "...\n";
+                foundedEntries++;
+            }
+        }
+        line_index++;
+    }
+    
+}
+void Search::show (int topk, std::vector<std::string>& term_list) {
     std::vector<std::pair<int, float>> top;
     for (int i = 0; i < relative_indexes.size(); i++) {
         top.push_back({i, relative_indexes[i]});
     }
     std::sort(top.begin(), top.end(), cmp);
-    std::cout << "RELEVANT FILES \n";
+    
     for (int i = 0; i < topk; i++) {
+        if (top[i].second == 0)
+            break;
+        
         std::string fn = project_path + "\\Data\\index" + std::to_string(top[i].first) + ".txt";
         std::ifstream file(fn);
         std::string line;
         file >> line;
-        std::cout << i + 1 << ") " << line << " " << top[i].second << "\n";
+        std::cout << i + 1 << ") " << line << "\n";
+        showListOfEntry(term_list, line);
         
     }
 }
 
 void Search::rangingFiles() {
-    
+    auto begin = std::chrono::steady_clock::now();
     std::vector<std::string> terms_list = ExploringLine(search_query);
     
     std::string post_list = project_path + "\\Data\\posting_list.txt";
@@ -145,8 +168,10 @@ void Search::rangingFiles() {
     scoringTerms(terms_list);
     
     relative_indexes = CalculateRela(search_query).indexes;
-    
-    show(5);
+    auto end = std::chrono::steady_clock::now();
+    auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+    std::cout << "RELEVANT FILES for " << search_query << " founded in " << elapsed_ms.count()<< "ms \n";
+    show(5, terms_list);
 }
 
 void Search::remakePostingList(std::string& path_) {

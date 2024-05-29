@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <chrono>
 #include "indexation/utils.hpp"
 
 class term {
@@ -39,6 +40,7 @@ class Search {
     size_t N; // number of Files
     size_t avg_len;
     size_t all_len;
+    int HowManyEntries = 5;
     std::map<std::string, std::vector<int>> posting_list;
     std::map<std::string, term> scorings;
     std::vector<float> relative_indexes;
@@ -48,10 +50,10 @@ class Search {
         void rangingFiles();
         void remakePostingList(std::string& path_);
         void scoringTerms(std::vector<std::string>& terms_list);
-        void show(int topk);
+        void show(int topk, std::vector<std::string>& term_list);
         float scoringFile(const std::string& term, const std::string& fn);
         term CalculateRela(const std::string& q);
-        void showListOfEntry(const std::string& word, const std::string& fn);
+        void showListOfEntry(std::vector<std::string>& term_list, const std::string& fn);
         
 };
 
