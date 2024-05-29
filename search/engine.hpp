@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
-
-namespace stas {
+    
     class Search  {
         public:
             Search();
@@ -15,4 +14,3 @@ namespace stas {
             void run();
             
     };
-};

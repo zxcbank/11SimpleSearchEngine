@@ -7,3 +7,7 @@
 #include <vector>
 
 void correct_term(std::string& term);
+
+bool IsDirCorrect(const std::string& dir);
+
+bool IsExtensionCorrect(const std::string& dir);

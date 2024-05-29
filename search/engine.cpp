@@ -3,10 +3,10 @@
 //
 #include "engine.hpp"
 
-void stas::Search::run() {
+void Search::run() {
 
 }
 
-stas::Search::Search() {
+Search::Search() {
 
 }

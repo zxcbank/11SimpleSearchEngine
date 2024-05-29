@@ -16,6 +16,8 @@ class Index {
         size_t avg_length = 0; // d_avg в формуле
         std::map<std::string, std::set<int>> PostingList;
         std::string path;
+        
+        void recursive_index(std::vector<std::string>& paths_, const std::string&  current_path);
     public:
         [[maybe_unused]] explicit Index(std::string&& path_);
         
