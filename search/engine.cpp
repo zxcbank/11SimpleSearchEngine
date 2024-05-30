@@ -25,7 +25,7 @@ Search::Search(int argc, char** argv,std::string&& PROJ_DIR) {
     std::string query;
     project_path = PROJ_DIR;
     if (!IsIndexed(project_path))  {
-        std::cerr  <<  "Data file not found! \n";
+        std::cerr << "Data file not found! \n";
         exit(1);
     } else {
         std::string data_path = project_path + "\\Data\\posting_list.txt";
